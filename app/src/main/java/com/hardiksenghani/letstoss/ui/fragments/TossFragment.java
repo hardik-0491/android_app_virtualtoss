@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -42,13 +43,16 @@ public class TossFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (tossId == -1) {
-            tossId = getArguments().getInt(ARG_KEY_TOSS);
+            if (getArguments() != null) {
+                tossId = getArguments().getInt(ARG_KEY_TOSS);
+            }
         }
+
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_toss, container, false);
 

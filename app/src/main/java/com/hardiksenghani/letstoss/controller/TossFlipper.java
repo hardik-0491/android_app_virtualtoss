@@ -7,7 +7,7 @@ public class TossFlipper extends Thread {
 
     private Toss toss;
     private int totalTime, remainingTime;
-    private String tossOutcome;
+    private String tossOutcome = null;
     private UpdateListener updateListener;
 
     public TossFlipper(Toss toss, int totalTime, UpdateListener updateListener) {
