@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_toss_duration_titles">
+        <item>0 seconds</item>
+        <item>1 seconds</item>
+        <item>3 seconds</item>
+        <item>5 seconds</item>
+    </string-array>
+
+    <string-array name="pref_toss_duration_values">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+
+</resources>

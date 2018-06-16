@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="3"
+        android:entries="@array/pref_toss_duration_titles"
+        android:entryValues="@array/pref_toss_duration_values"
+
+        android:key="@string/pref_key_outcome_delay_time"
+        android:title="@string/pref_title_outcome_delay_duration" />
+
+</PreferenceScreen>

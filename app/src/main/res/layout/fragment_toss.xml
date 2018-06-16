@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_toss_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.fragments.TossFragment">
+
+    <TextView
+        android:id="@+id/fragment_toss_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_toss_floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/fragment_toss_helptext"></TextView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fragment_toss_floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_sync_white_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_toss_banner_ad"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_toss_banner_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admob_toss_fragment_banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+
+</android.support.constraint.ConstraintLayout>

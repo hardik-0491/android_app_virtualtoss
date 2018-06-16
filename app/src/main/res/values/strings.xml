@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Virtual Toss</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- Activity Titles -->
+    <string name="title_activity_toss">Virtual Toss</string>
+    <string name="title_activity_setting">Settings</string>
+    <string name="title_activity_toss_config">Toss</string>
+
+    <!-- Nav Drawer Text -->
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+    <string name="nav_drawer_home">Home</string>
+    <string name="nav_drawer_setting">@string/title_activity_setting</string>
+    <string name="nav_drawer_toss_config">@string/title_activity_toss_config</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_single_toss">Lets Toss</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="fragment_toss_helptext">Press button to start</string>
+
+    <!-- Admob Values -->
+    <string name="admob_app_id" translatable="false">ca-app-pub-4377347893636901~7184561540</string>
+    <string name="admob_toss_fragment_banner_ad_unit_id" translatable="false">ca-app-pub-4377347893636901/1357519797</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Settings for Toss -->
+    <string name="pref_header_outcome_delay">Outcome</string>
+
+    <string name="pref_title_outcome_delay_duration">Delay Time</string>
+    <string name="pref_key_outcome_delay_time" translatable="false">outcome_delay_time</string>
+
+</resources>

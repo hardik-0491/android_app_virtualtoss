@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'hardik'
+            storeFile file('C:/Hardik/AndroidStudio/keystore/lets-toss-keystore.jks')
+            storePassword 'hardik'
+        }
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.hardiksenghani.letstoss"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 4
+        versionName "2.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:design:$support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation "com.android.support:support-vector-drawable:$support_version"
+    implementation "com.android.support:support-v4:$support_version"
+    implementation "android.arch.lifecycle:extensions:$arch_version"
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    annotationProcessor "android.arch.lifecycle:compiler:$arch_version"
+    implementation "android.arch.persistence.room:runtime:$arch_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$arch_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+}
