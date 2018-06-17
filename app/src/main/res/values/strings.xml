@@ -22,10 +22,6 @@
 
     <string name="fragment_toss_helptext">Press button to start</string>
 
-    <!-- Admob Values -->
-    <string name="admob_app_id" translatable="false">ca-app-pub-4377347893636901~7184561540</string>
-    <string name="admob_toss_fragment_banner_ad_unit_id" translatable="false">ca-app-pub-4377347893636901/1357519797</string>
-
     <string name="title_activity_settings">Settings</string>
 
     <!-- Settings for Toss -->
