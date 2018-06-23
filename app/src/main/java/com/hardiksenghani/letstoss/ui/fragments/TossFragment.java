@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.hardiksenghani.letstoss.R;
 import com.hardiksenghani.letstoss.controller.TossFlipper;
 import com.hardiksenghani.letstoss.controller.TossManager;
@@ -33,6 +34,7 @@ public class TossFragment extends Fragment {
     private TextView tossOutcomeText;
     private int tossId;
     private SharedPreferences sharedPreferences;
+    private FirebaseAnalytics firebaseAnalytics;
 
     public TossFragment() {
         tossId = -1;
@@ -49,6 +51,8 @@ public class TossFragment extends Fragment {
         }
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+        firebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
     }
 
     @Override
@@ -73,6 +77,10 @@ public class TossFragment extends Fragment {
                 String key = getResources().getString(R.string.pref_key_outcome_delay_time);
                 String value = sharedPreferences.getString(key, Integer.toString(TossManager.DEFAULT_OUTCOME_DELAY_TIME));
                 tossFragmentViewModel.flipToss(Integer.parseInt(value));
+
+                Bundle firebaseEventDataBundle = new Bundle();
+                firebaseEventDataBundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "tossed");
+                firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, firebaseEventDataBundle);
             }
         });
 
