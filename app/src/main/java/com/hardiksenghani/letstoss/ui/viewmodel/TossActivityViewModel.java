@@ -29,9 +29,11 @@ public final class TossActivityViewModel extends ViewModel {
         new DBUtils.DBAsyncTask(new DBUtils.DBTask() {
             @Override
             public void performTask(AppDatabase appDatabase, HashMap<String, Object> objectMap) {
-                allToss.clear();
-                for (Integer tossId : tossIds) {
-                    allToss.add(Toss.readFromDB(appDatabase, tossId.intValue()));
+                synchronized (allToss) {
+                    allToss.clear();
+                    for (Integer tossId : tossIds) {
+                        allToss.add(Toss.readFromDB(appDatabase, tossId.intValue()));
+                    }
                 }
                 allTossLiveData.postValue(allToss);
             }

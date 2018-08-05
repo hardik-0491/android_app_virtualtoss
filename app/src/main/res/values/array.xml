@@ -2,7 +2,7 @@
 <resources>
 
     <string-array name="pref_toss_duration_titles">
-        <item>0 seconds</item>
+        <item>Instant</item>
         <item>1 seconds</item>
         <item>3 seconds</item>
         <item>5 seconds</item>
