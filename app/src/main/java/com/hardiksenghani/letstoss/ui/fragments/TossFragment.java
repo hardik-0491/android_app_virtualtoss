@@ -58,7 +58,7 @@ public class TossFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_toss, container, false);
+        final View view = inflater.inflate(R.layout.fragment_toss, container, false);
 
         tossFragmentViewModel = ViewModelProviders.of(this).get(TossFragmentViewModel.class);
         tossFragmentViewModel.getTossFlipperMutableLiveData().observe(this, new Observer<TossFlipper>() {
